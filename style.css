@@ -66,22 +66,16 @@ body {
     margin-top: 150px;
   }
   
-  #education, #honors, #experience, #community, #skills, #projects {
+  #honors, #experience, #community, #skills, #projects {
     border: 1px solid #ddd;
     padding: 20px;
   }
   
-  #education table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  #education th, #education td {
-    padding: 10px;
+  #education{
     border: 1px solid #ddd;
-    text-align: left;
+    padding: 20px;
   }
-  
+
   #projects, #community, #skills {
     list-style: disc;
   }
@@ -89,4 +83,58 @@ body {
   #projects li h3, #community li h3, #skills li h3 {
     margin-bottom: 5px;
   }
+
+  #grid {
+    height: 70px;
+    margin-left: 15%;
+    width: 70%;
+    transition: 500ms;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+    background: crimson;
+  }
   
+  :where(.left, .center, .right) {
+    background: white;
+    transition: 300ms;
+  }
+  
+  :where(.left, .center, .right):hover {
+    background: crimson;
+  }
+  .lhover-content {
+    display: none; /* Hide the hover content initially */
+    position: absolute; /* Make it position itself relative to the wrapper */
+  }
+  .chover-content {
+    display: none; /* Hide the hover content initially */
+    position: absolute; /* Make it position itself relative to the wrapper */
+  }
+  .rhover-content {
+    display: none; /* Hide the hover content initially */
+    position: absolute; /* Make it position itself relative to the wrapper */
+  }
+  #grid:has(.left:hover) {
+    grid-template-columns: 2fr 0.5fr 0.5fr;
+  }
+  
+  .left:hover .lhover-content {
+    display: block; /* Show the hover content only for the left div on hover */
+  }
+
+  #grid:has(.center:hover) {
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+  }
+
+  .center:hover .chover-content {
+    display: block; /* Show the hover content only for the left div on hover */
+  }
+
+  #grid:has(.right:hover) {
+    grid-template-columns: 0.5fr 0.5fr 2fr;
+  }
+
+  .right:hover .r   hover-content {
+    display: block; /* Show the hover content only for the left div on hover */
+  }
