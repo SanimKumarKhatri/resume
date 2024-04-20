@@ -62,7 +62,7 @@ body {
     margin-top: 150px;
   }
   
-  #education, #honors, #experience, #community {
+  #education, #honors, #experience, #community, #skills {
     border: 1px solid #ddd;
     padding: 20px;
   }
@@ -78,11 +78,11 @@ body {
     text-align: left;
   }
   
-  #projects, #community {
+  #projects, #community, #skills {
     list-style: disc;
   }
   
-  #projects li h3, #community li h3 {
+  #projects li h3, #community li h3, #skills li h3 {
     margin-bottom: 5px;
   }
   
