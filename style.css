@@ -35,9 +35,13 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    text-align: left;
   }
   
+  header ul{
+    text-align: center;
+  }
+
   li {
     display: inline-block;
     margin: 0 10px;
@@ -62,7 +66,7 @@ body {
     margin-top: 150px;
   }
   
-  #education, #honors, #experience, #community, #skills {
+  #education, #honors, #experience, #community, #skills, #projects {
     border: 1px solid #ddd;
     padding: 20px;
   }
